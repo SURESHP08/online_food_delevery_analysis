@@ -1,1 +1,218 @@
-# online_food_delevery_analysis
+# 🍔 Food Delivery Analytics System
+
+An end-to-end **Data Analytics + Dashboard project** that processes food delivery data, stores it in a MySQL database, analyzes it with SQL queries, and visualizes insights using Streamlit.
+
+---
+
+## 📌 Project Overview
+
+This project demonstrates a complete analytics pipeline:
+
+**Raw CSV → Data Cleaning → Database Storage → SQL Analysis → Dashboard Visualization**
+
+It is ideal for:
+
+* Data analytics portfolios
+* SQL practice projects
+* Dashboard demos
+* ETL pipeline demonstrations
+
+---
+
+## 🛠 Tech Stack
+
+* Python 3
+* Pandas
+* NumPy
+* MySQL
+* Streamlit
+* SQL
+
+---
+
+## 📁 Project Structure
+
+```
+food-delivery-analytics/
+│
+├── data_loader.py          # Loads CSV → cleans → inserts into MySQL
+├── dashboard.py            # Streamlit dashboard
+├── queries.sql             # Analytical SQL queries
+├── dataset.csv             # Input dataset
+└── README.md               # Project documentation
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/yourusername/food-delivery-analytics.git
+cd food-delivery-analytics
+```
+
+---
+
+### 2️⃣ Install Dependencies
+
+```bash
+pip install pandas numpy mysql-connector-python streamlit
+```
+
+---
+
+### 3️⃣ Configure MySQL Credentials
+
+Edit inside **data_loader.py**
+
+```python
+host="localhost"
+user="root"
+password="your_password"
+```
+
+---
+
+### 4️⃣ Run Data Loader Script
+
+```bash
+python data_loader.py
+```
+
+✔ Creates database
+✔ Creates table
+✔ Inserts records
+
+---
+
+### 5️⃣ Run Dashboard
+
+```bash
+streamlit run dashboard.py
+```
+
+---
+
+## 🗄 Database Schema
+
+**Database:** `food_delivery`
+**Table:** `orders`
+
+Main columns:
+
+| Column        | Description             |
+| ------------- | ----------------------- |
+| order_date    | Order timestamp         |
+| city          | Customer city           |
+| cuisine       | Cuisine ordered         |
+| order_value   | Order price             |
+| delivery_time | Delivery duration       |
+| rating        | Customer rating         |
+| profit_margin | Profit earned           |
+| day_type      | Weekend/Weekday         |
+| peak_hour     | Peak time flag          |
+| customer_age  | Age                     |
+| age_group     | Age category            |
+| delivery_perf | Delivery performance    |
+| order_status  | Delivered/Cancelled     |
+| cancel_reason | Reason for cancellation |
+| distance_km   | Delivery distance       |
+| payment_mode  | Payment type            |
+
+---
+
+## 🧹 Data Cleaning Logic
+
+| Column        | Missing Value Strategy |
+| ------------- | ---------------------- |
+| Delivery Time | Median                 |
+| Order Value   | Median                 |
+| Customer Age  | Mode                   |
+| Payment Mode  | Mode                   |
+
+If payment mode column is missing, values are **simulated randomly**.
+
+---
+
+## 📊 SQL Analytics Included
+
+The project includes 15 analytical queries such as:
+
+* Top spending customers
+* Revenue trends by month
+* Cuisine performance
+* Delivery time analysis
+* Cancellation rates
+* Payment preferences
+* Distance vs delay insights
+
+Run:
+
+```sql
+USE food_delivery;
+SOURCE queries.sql;
+```
+
+---
+
+## 📈 Dashboard Features
+
+The Streamlit dashboard displays:
+
+✔ KPI metrics
+✔ Monthly revenue trend
+✔ Payment mode analysis
+✔ City delivery performance
+✔ Cancellation reasons
+
+Metrics shown:
+
+* Total Orders
+* Total Revenue
+* Average Order Value
+* Avg Delivery Time
+* Cancellation Rate
+* Avg Rating
+* Profit Margin %
+
+---
+
+## 🎯 Key Insights You Can Generate
+
+This project helps answer business questions like:
+
+* Which customers spend the most?
+* Do weekends generate higher revenue?
+* Which cuisines perform best?
+* Do longer distances reduce ratings?
+* What causes cancellations?
+
+---
+
+## 🚀 Future Enhancements
+
+* Machine learning delivery time prediction
+* Customer segmentation clustering
+* Real-time API integration
+* Restaurant-level analysis
+* Cloud deployment
+
+---
+
+## 🤝 Contributing
+
+Contributions, improvements, and suggestions are welcome.
+
+---
+
+## 📜 License
+
+Open-source for educational and portfolio use.
+
+---
+
+## ⭐ Support
+
+If you found this useful, consider giving the repo a star ⭐
