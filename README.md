@@ -35,10 +35,10 @@ It is ideal for:
 ```
 food-delivery-analytics/
 │
-├── data_loader.py          # Loads CSV → cleans → inserts into MySQL
-├── dashboard.py            # Streamlit dashboard
-├── queries.sql             # Analytical SQL queries
-├── dataset.csv             # Input dataset
+├── online_food_del.py          # Loads CSV → cleans → inserts into MySQL
+├── streamlit_dashboard.py            # Streamlit dashboard
+├── online_food_del.sql             # Analytical SQL queries
+├── ONINE_FOOD_DELIVERY_ANALYSIS.csv             # Input dataset
 └── README.md               # Project documentation
 ```
 
