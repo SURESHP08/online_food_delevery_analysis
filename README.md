@@ -1,4 +1,4 @@
-# 🍔 Food Delivery Analytics System
+# 🍔 Online Food Delivery Analytics System
 
 An end-to-end **Data Analytics + Dashboard project** that processes food delivery data, stores it in a MySQL database, analyzes it with SQL queries, and visualizes insights using Streamlit.
 
